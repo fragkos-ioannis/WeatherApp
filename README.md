@@ -5,7 +5,7 @@ How To Use 🔧 From your command line, first clone WeatherApp:
 $ git clone https://github.com/fragkos-ioannis/WeatherApp.git
 
 ### Go into the repository
-$ cd path/WeatherApp
+$ cd WeatherApp
 
 ### Remove current origin repository
 $ git remote remove origin
