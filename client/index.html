@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        
+        <title>Cumulus &mdash; Best Weather Web App</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left-block">
+                <form action="#" class="search">
+                    <input type="text" class="search__input" placeholder="Search">
+                    <button type="submit" class="search__button">
+                        <svg class="search__icon">
+                            <use xlink:href="public/img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>
+                </form>
+                <div class="elements">
+                    <div id="elements__weather-info" class="info-box">
+                        <p id="no-data">No data provided</p>
+                        <img id="weather-icon-img" src="" alt="Weather Icon" style="display: none;">
+                    </div>
+                    <div class="elements__temperature">
+                        <div class="elements__temperature-wrapper">
+                            <span class="main-temp">31</span>
+                            <svg class="elements__celcius">
+                                <use href="public/img/sprite.svg#icon-Celsius"></use>
+                            </svg>
+                        </div>
+                        <div class="elements__temperature-description">
+                            <p class="description">No Data</p>
+                        </div>
+                    </div>
+                    <hr class="breakline">
+                    <div class="elements__day">
+                        <p id="month">21-July-2023</p>
+                        <p id="day-time">Friday,12:44pm</p>
+                        <p id="status">Day</p>
+                    </div>
+                    <div class="elements__country">
+                        <p>No Data</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-block">
+                <div class="bar">
+                    <button class="bar__button" id="todayBtn">Today</button>
+                    <button class="bar__button" id="tomorrowBtn">Tomorrow</button>
+                </div>
+                <div class="grid">
+                    <div class="grid__wind info-box">
+                        <p class="label">Wind</p>
+                        <span id="speed">6km/h</span>
+                        <span id="direction" class="label direction">East</span>
+                    </div>
+                    <div class="grid__humidity info-box">
+                        <p class="label">Humidity</p>
+                        <span id="hum">69%</span>
+                    </div>
+                    <div id="realfeel" class="grid__realfeel info-box">
+                        <p class="label">Real feel</p>
+                        <span id="realfeel-temp">31</span>
+                        <svg class="grid__celcius">
+                            <use xlink:href="public/img/sprite.svg#icon-Celsius"></use>
+                        </svg>
+                    </div>
+                    <div id="visibility" class="grid__visibility info-box">
+                        <p class="label">Visibility</p>
+                        <span id="visibility-distance">10000m</span>
+                    </div>
+                    <div id="pressure" class="grid__pressure info-box">
+                        <p class="label">Pressure</p>
+                        <span id="pressure-value">1000hPa</span>
+                    </div>
+                    <div id="clouds" class="grid__clouds info-box">
+                        <p class="label">Clouds</p>
+                        <span id="cloud-coverage">70%</span>
+                    </div>
+                    <div id="temperature-history" class="grid__temperature-history info-box">
+                        <p class="label">Temperature History</p>
+                        <svg class="elements__arrow" id="arrow-up">
+                            <use xlink:href="public/img/sprite.svg#icon-arrow-up2"></use>
+                            <p id="temp-high">31</p>
+                            <svg class="arrow-up__celcius">
+                                <use xlink:href="public/img/sprite.svg#icon-Celsius"></use>
+                            </svg>
+                        </svg>
+                        <svg class="elements__arrow" id="arrow-down">
+                            <use xlink:href="public/img/sprite.svg#icon-arrow-down2"></use>
+                            <p id="temp-low">31</p>
+                            <svg class="arrow-down__celcius">
+                                <use xlink:href="public/img/sprite.svg#icon-Celsius"></use>
+                            </svg>
+                        </svg>
+                    </div>
+                    <div id="seaLevel" class="grid__seaLevel info-box">
+                        <p class="label">Sea Pressure</p>
+                        <span id="sea-level-pressure">1015hPa</span>
+                    </div>
+                    <div id="sun" class="grid__sun info-box">
+                        <p class="label">Sun</p>
+                        <span id="sun-rise"><span class="label">Rise </span>5:17 am</span>
+                        <span id="sun-set"><span class="label">Set </span>5:17 pm</span>
+                    </div>                    
+                </div>
+                <p class="footer">All Data Provided by  <a class="footer-btn" href="https://openweathermap.org/api" target="_blank">OpenWeather</a></p>
+            </div>
+        </div>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
