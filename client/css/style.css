@@ -85,7 +85,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0; }
 
 .container {
@@ -93,6 +92,15 @@ body {
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden; }
+  @media only screen and (max-width: 912px) {
+    .container {
+      flex-direction: column;
+      width: 80%;
+      overflow: auto; } }
+  @media only screen and (max-width: 714px) {
+    .container {
+      width: 100%;
+      overflow: auto; } }
 
 .left-block {
   flex: 1;
@@ -224,6 +232,10 @@ form {
     color: var(--color-grey-light-2); }
   .grid__celcius {
     width: 2rem; }
+  @media only screen and (max-width: 714px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr); } }
 
 .elements__arrow {
   width: 1.6rem; }
@@ -296,21 +308,3 @@ form {
     top: calc(100% - 5.5rem);
     left: 52%;
     transform: translateY(-50%); }
-
-/*
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
-900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
-
-$breakpoint arguement choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-
-ORDER: Base + typography > general layout + grid > page layout > components
-
-1em = 16px
-*/

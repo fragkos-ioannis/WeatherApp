@@ -2,7 +2,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
 }
 
@@ -11,6 +10,17 @@ body {
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    
+    @media only screen and (max-width: 912px){
+        flex-direction: column;
+        width:80%;
+        overflow:auto;
+    }
+
+    @media only screen and (max-width: 714px){
+       width: 100%;
+       overflow:auto;
+    }
 }
 ///////////////////////
 /// LEFT BLOCK CSS
@@ -191,11 +201,13 @@ form {
         color: var(--color-grey-light-2);
     }
 
-
-
-
     &__celcius {
         width: 2rem;
+    }
+
+    @media only screen and (max-width: 714px){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
     }
 }
 
