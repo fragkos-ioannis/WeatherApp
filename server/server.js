@@ -1,13 +1,17 @@
 import express from "express";
 import axios from "axios";
 import dotenv from "dotenv";
+import cors from "cors";
 
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware to serve static files
-app.use(express.static('public'));
+//app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
+app.use(cors({ optionsSuccessStatus: 200 }));
+app.use(express.json());
 
 // API routes
 app.get('/api/weather', async (req, res) => {
